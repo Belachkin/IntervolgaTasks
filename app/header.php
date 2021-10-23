@@ -5,6 +5,7 @@
         <title>title</title>
 
         <link href="public/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="../public/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     </head>
 <body>
 
