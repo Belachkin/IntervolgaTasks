@@ -12,9 +12,6 @@ require_once '../app/header.php';
         </p>
       </div>
 </div>
-
-
-  
   
   <!-- github не пропускает изображение такого размера по этому его нет -->
   <div>
@@ -25,14 +22,6 @@ require_once '../app/header.php';
         width: auto;
         height: auto;" >
   </div>
-  
-  
-  
- 
-
-
-
-
 
 <?php 
 require_once '../app/footer.php';
