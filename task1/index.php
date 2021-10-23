@@ -50,7 +50,7 @@ require_once '../app/header.php';
         exit;
     }
     else {
-        require 'LongestIncreasingSubsequence.php';
+        require 'longest_increasing_subsequence.php';
         $nvp = new LIS;
         $firstArr = $nvp->fillArray($arrSize, $randSize);
         $secondArr = $nvp->GetNVP($firstArr);
