@@ -18,14 +18,14 @@ require_once '../app/header.php';
 
             <div class="col-sm-3">
                 <label for="From" class="form-label">Размер массива (MAX: 100)</label>
-                <input type="number" name="arrSize" class="form-control" value="100">
+                <input type="number" name="arrSize" class="form-control" value="5">
             </div>
 
             <div class="col-sm-7">
                 <label for="username" class="form-label">Диапазон заполнения массива случайными числами (MAX: 999)</label>
                 <div class="input-group has-validation">
                     <span class="input-group-text">От 1 До </span>
-                    <input type="number" name="randSize" class="form-control" value="30">             
+                    <input type="number" name="randSize" class="form-control" value="9">             
                 </div>
             </div>
 

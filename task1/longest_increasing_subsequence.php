@@ -4,7 +4,6 @@
 
 class LIS{
 
-
     /**
        * @param int $arrSize
        * @param int $randSize
@@ -24,12 +23,34 @@ class LIS{
        * @param array $arr
        * @return array
      */
-    public function GetNVP($arr) {
+    public function GetNVP(array $arr) {
+        $searchStart = 0;
+        $searchEnd = 0;
 
-        sort($arr); //сортируем массив по возрастанию
-        $arr = array_unique($arr); //удаляем повторяющиеся элементы в массиве
+        $start = 0;
+        $end = 0;
 
-        return $arr;
+        for($i = 1; $i < count($arr); ++$i) {
+            if($arr[$i] <= $arr[$i - 1]) {
+                if($end - $start > $searchEnd - $searchStart) {
+                    $searchEnd = $end;
+                    $searchStart = $start;
+                }
+
+                $end = $i;
+                $start = $i;
+            }
+            else {
+                $end = $i;
+            }
+        }
+
+        $result = [$searchEnd - $searchStart + 1];
+        for($i = $searchStart; $i <= $searchEnd; ++$i) {
+            $result[$i - $searchStart] = $arr[$i];
+        }
+
+        return $result;
     }
 }
 
