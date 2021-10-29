@@ -21,14 +21,14 @@ require_once '../app/header.php';
 
         <div class="col-sm-3">
             <label for="From" class="form-label">Размер массива (MAX: 100)</label>
-            <input type="number" name="arrSize" class="form-control" value="100">
+            <input type="number" name="arrSize" class="form-control" value="5">
         </div>
 
         <div class="col-sm-7">
             <label for="username" class="form-label">Диапазон заполнения массива случайными числами (MAX: 300)</label>
             <div class="input-group has-validation">
                 <span class="input-group-text">От 1 До </span>
-                <input type="number" name="randSize" class="form-control" value="30">             
+                <input type="number" name="randSize" class="form-control" value="9">             
             </div>
         </div>
 
@@ -59,12 +59,16 @@ require_once '../app/header.php';
         for($i = 0; $i < $arrSize; $i++) { //заполняем массив случайными числами
             $arr[$i] = rand(1, $randSize);
         } 
-        
+        require 'pairs.php';
+        $a = new Pairs;
+        $b = $a->GetPairs($arr)
 ?>
         <p>массив</p>
         <div class="alert alert-light" role="alert"><?php print_r($arr); ?></div> 
         <p>[Элемент] => Кол-во</p>
         <div class="alert alert-light" role="alert"><?php print_r(array_count_values($arr)); ?></div> 
+        <p>[Элемент] => Кол-во пар</p>
+        <div class="alert alert-light" role="alert"><?php print_r($b); ?></div> 
 <?php
     }
 ?>
